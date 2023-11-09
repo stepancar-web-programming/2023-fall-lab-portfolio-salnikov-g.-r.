@@ -4,22 +4,35 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="css/hobbys.css">
+    <link
+			rel="stylesheet"
+			href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css"
+			integrity="sha512-tS3S5qG0BlhnQROyJXvNjeEM4UpMXHrQfTGmbQ1gKmelCxlSEBUaxhRBj/EFTzpbP4RVSrpEikbmdJobCvhE3g=="
+			crossorigin="anonymous"
+			referrerpolicy="no-referrer"
+		/>
+		<link
+			rel="stylesheet"
+			href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.theme.default.css"
+			integrity="sha512-OTcub78R3msOCtY3Tc6FzeDJ8N9qvQn1Ph49ou13xgA9VsH9+LRxoFU6EqLhW4+PKRfU+/HReXmSZXHEkpYoOA=="
+			crossorigin="anonymous"
+			referrerpolicy="no-referrer"
+		/>
 
     <title>Document</title>
 </head>
 <body>
     <div class="wrapper">
         <header class="header">
-            <div class="container">
+            <div class="header__container">
                 <div class="header__body">
-                    
                     <div class="header__burger">
                         <span></span>
                     </div>
                     <nav class="header__menu">
                         <ul class="header__list">
                             <li>
-                                <a href="" class="header__link">Главная</a>
+                                <a href="./index.html" class="header__link">Главная</a>
                             </li>
                             <li>
                                 <a href="" class="header__link">Главная</a>
@@ -31,13 +44,67 @@
                         </ul>
                     </nav>
                 </div>
+                
+            </div>
+        </header> 
+        <main>
+            <div class="main__container">
+                <div class="main__info">
+                    <div class="main__info__text">
+                        <h1>Lorem ipsum dolor sit amet consectetur adipisicing elit. Pariatur quis sequi commodi quas, nulla dolor vel unde ab illum doloribus mollitia vero ducimus nobis at fuga animi consectetur eveniet tempora?
+                        </h1>
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Corporis quidem, esse, sapiente laboriosam doloremque corrupti sit veniam dolorem necessitatibus ullam nobis aliquid nemo obcaecati! Eius numquam ipsam omnis explicabo quibusdam?
+
+                        </p>
+                    </div>
+                    
+                </div>
+                <div class="main__photo">
+                    <div class="container-right">
+                        <div class="main__photo__row">
+                            <div class="main__photo__content">
+                                <h2 class="main__photo__title">
+                                    <span></span>
+                                    Фотографии
+                                </h2>
+                                <div class="main__photo__text">
+                                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Aliquam, cumque. Soluta quae architecto dolorum ullam rerum voluptates molestiae optio repudiandae id. Nam harum vitae voluptatem cumque distinctio autem eligendi culpa.</p>
+                                </div>
+                               
+                            </div>
+
+                            <div class="main__photo__slider">
+                                <div class="slider">
+                                    <div class="owl-carousel">
+                                        <img class="slider__item" src="./img/slider/01.jpg" alt="Slider item" />
+                                        <img class="slider__item" src="./img/slider/02.jpg" alt="Slider item" />
+                                        <img class="slider__item" src="./img/slider/03.jpg" alt="Slider item" />
+                                    </div>
+                                    <button class="slider__btn slider__btn--prev">
+                                        <img src="./img/slider/arrow-left.svg" alt="" />
+                                    </button>
+                                    <button class="slider__btn slider__btn--next">
+                                        <img src="./img/slider/arrow-right.svg" alt="" />
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
             </div>
 
-        </header> 
+        </main>
     </div>
-    <script src="https://code.jquery.com/jquery-2.2.4.min.js"></script>
-    <script src="./js/hobbys.js"></script>
-
-    
+    <script
+    src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"
+    referrerpolicy="no-referrer"
+></script>
+<script
+    src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js"
+    integrity="sha512-bPs7Ae6pVvhOSiIcyUClR7/q2OAsRiovw4vAkX+zJbw3ShAeeqezq50RIIcIURq7Oa20rW2n2q+fyXBNcU9lrw=="
+    crossorigin="anonymous"
+    referrerpolicy="no-referrer"
+></script>
+<script src="./js/hobbys.js"></script>
 </body>
 </html>
