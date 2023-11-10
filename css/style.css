@@ -29,7 +29,9 @@ img {
 }
 
 /*-------------------------------Header-------------------------------- */
-
+.typed-strings span{
+    display: none;
+}
 .header {
     position: relative;
     display: flex;
@@ -79,16 +81,14 @@ img {
   
 }
 
-.header__container {
 
-}
 .typed-cursor {
     font-weight: 700;
     font-size: 70px;
     color: #FFFFFF;
-    line-height: 100%;
 
 }
+
 
 
 /* -------------------------MAIN------------------------ */

@@ -273,3 +273,22 @@ function render() {
 }
 
 window.requestAnimationFrame(render)
+
+
+// ------------------------------VIDEO-----------------------------
+const video = document.querySelector('.video'),
+	playButton = document.querySelector('.controls__video__play'),
+	stopButton  = document.querySelector('.controls__stop'),
+	playButtonImg = document.querySelector('controls__video__play__btn'),
+	progress =document.querySelector('controls__progress'),
+	time =document.querySelector('controls__time')
+
+
+function toggleVideoStatus(){
+	if(video.paused){
+		video.play()
+	}else{
+		video.pause()
+	}
+}
+playButton.addEventListener('click', toggleVideoStatus)
