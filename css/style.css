@@ -36,7 +36,6 @@ img {
     flex-direction: column; 
     justify-content: center; 
     align-items: center; 
-
     width: 100%;
     height: 100vh;
     background-size: cover;
@@ -81,6 +80,13 @@ img {
 }
 
 .header__container {
+
+}
+.typed-cursor {
+    font-weight: 700;
+    font-size: 70px;
+    color: #FFFFFF;
+    line-height: 100%;
 
 }
 

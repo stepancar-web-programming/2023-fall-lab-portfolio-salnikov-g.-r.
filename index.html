@@ -11,10 +11,21 @@
 </head>
 <body>
     <header class="header" id="header">
-        <div class="header__container container">
-            <h1 class="header-title">САЛЬНИКОВ ГЕОРГИЙ</h1>
-            <p class="header-subtitle">JAVA-РАЗРАБОТЧИК</p>
+        <div id="typed-strings">
+            <span>ГЕОРГИЙ САЛЬНИКОВ</span>
+            <span>JAVA-РАЗРАБОТЧИК</span>
         </div>
+        
+        <div class="text-typing header__container container">
+            <span class="header-title" id="typed"></span>
+        </div>
+        <!-- <div class="header__container container" id="typed-strings">
+            
+            <span class="header-title">ГЕОРГИЙ САЛЬНИКОВ</span>
+            <span>JAVA-РАЗРАБОТЧИК</span>
+            <!-- <h1 class="header-title">САЛЬНИКОВ ГЕОРГИЙ</h1>
+            <p class="header-subtitle">JAVA-РАЗРАБОТЧИК</p> -->
+        </div> -->
         <a href="#portfolio" class="header-arrow">
             <img src="./img/chevron-down.svg" alt="Arrow">
         </a>
@@ -75,7 +86,7 @@
             </div>
         </div>
     </footer>
-
+    <script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.11"></script>
     <script src="./libs/jquery/jquery-3.7.1.min.js"></script>
     <script src="./libs/vide/jquery.vide.min.js"></script>
     <script src="./js/main.js"></script>
