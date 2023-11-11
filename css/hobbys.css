@@ -402,7 +402,7 @@ header:before{
 .main__photo__title {
    
 	margin-bottom: 15px;
-	font-size: 49px;
+	font-size: 44px;
 	font-weight: 600;
 }
 
@@ -447,13 +447,14 @@ header:before{
 	position: absolute;
 	top: 50%;
 	transform: translateY(-50%);
-	z-index: 9;
+	z-index: 2;
 
 	display: block;
 	width: 68px;
 	height: 68px;
 	border-radius: 50%;
     background-color: #bfd6f1;
+    transition: background-color 0.3s ease;
 
 	display: flex;
 	align-items: center;
@@ -529,9 +530,7 @@ header:before{
     flex-direction: column;
     align-items: center;
     max-width: 380px;
-    min-width: 360px;
-
-    width: 100%;
+   
     padding-bottom: 25px;
     border-radius: 30px;
     box-shadow: 0 0 20px rgba(0, 0, 0, 0.3);
