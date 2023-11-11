@@ -44,7 +44,7 @@ const progressSlider = document.querySelector('.progress-slider');
 
 
 
-//Название песен
+// Название песен
 const songs = ['Aqua - Barbie Girl','Eurythmics - Sweet Dreams Are Made of This',  'Leningrad - WWW',
     'ACDC - Back In Black', 'Depeche Mode - Personal Jesus', 'Queen - The Show Must Go On']
 // Песня по умолчанию 
@@ -136,7 +136,7 @@ let audioCtx = new (window.AudioContext || window.webkitAudioContext)();
 let source = audioCtx.createMediaElementSource(audio);
 let analyser = audioCtx.createAnalyser();
 source.connect(analyser); // Подключаем анализатор к элементу audio
-analyser.connect(audioCtx.destination); // Без этой строки нет звука, но анализатор работает.
+analyser.connect(audioCtx.destination); 
 let frequencyData = new Uint8Array(columnCount);
 
 window.addEventListener('resize', resizeCanvas, false);
@@ -278,17 +278,64 @@ window.requestAnimationFrame(render)
 // ------------------------------VIDEO-----------------------------
 const video = document.querySelector('.video'),
 	playButton = document.querySelector('.controls__video__play'),
+	playButtonsvg = document.querySelector('.controls__video__play__btn'),
 	stopButton  = document.querySelector('.controls__stop'),
-	playButtonImg = document.querySelector('controls__video__play__btn'),
-	progress =document.querySelector('controls__progress'),
-	time =document.querySelector('controls__time')
+	playButtonImg = document.querySelector('.controls__video__play__path'),
+	progress = document.querySelector('.progress-video-slider'),
+	time =document.querySelector('.controls__time')
 
 
 function toggleVideoStatus(){
 	if(video.paused){
 		video.play()
+		playButtonImg.setAttribute('d', 'M10.5195 0.269531H15.5V17.7305H10.5195V0.269531ZM0.5 17.7305V0.269531H5.48047V17.7305H0.5Z');
+		playButtonsvg.setAttribute('viewBox', "0 0 16 18")
+		
+		
 	}else{
 		video.pause()
+		playButtonImg.setAttribute('d', 'M0.0195312 0.269531L13.7305 9L0.0195312 17.7305V0.269531Z');
+		playButtonsvg.setAttribute('viewBox', "0 0 10 18")
 	}
 }
 playButton.addEventListener('click', toggleVideoStatus)
+
+video.addEventListener('click', toggleVideoStatus)
+function stopVideo(){
+	video.currentTime=0
+	video.pause()
+	playButtonImg.setAttribute('d', 'M0.0195312 0.269531L13.7305 9L0.0195312 17.7305V0.269531Z');
+    playButtonsvg.setAttribute('viewBox', "0 0 10 18")
+}
+stopButton.addEventListener('click',stopVideo)
+
+
+video.addEventListener('timeupdate', () => {
+    const currentTime = video.currentTime;
+    const duration = video.duration;
+    const progressPercentage = (currentTime / duration) * 3000;
+    progress.value = progressPercentage;
+    if(isNaN(duration)){
+        progressSlider.value=0;
+    }
+	let minutes = Math.floor(video.currentTime/60)
+	if (minutes<10){
+		minutes= '0'+String(minutes)
+	}
+	let seconds = Math.floor(video.currentTime%60)
+	if (seconds<10){
+		seconds= '0'+String(seconds)
+	}
+	time.innerHTML= `${minutes}:${seconds}`
+
+});
+
+progress.addEventListener('input', () => {
+    const progressValue = progress.value;
+    const duration = video.duration;
+    const currentTime = (progressValue * duration) / 3000;
+    video.currentTime = currentTime;
+});
+
+
+video.addEventListener('ended',stopVideo)

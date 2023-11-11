@@ -55,11 +55,22 @@
             <div class="main__container">
                 <div class="main__info">
                     <div class="main__info__text">
-                        <h1>Lorem ipsum dolor sit amet consectetur adipisicing elit. Pariatur quis sequi commodi quas, nulla dolor vel unde ab illum doloribus mollitia vero ducimus nobis at fuga animi consectetur eveniet tempora?
-                        </h1>
-                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Corporis quidem, esse, sapiente laboriosam doloremque corrupti sit veniam dolorem necessitatibus ullam nobis aliquid nemo obcaecati! Eius numquam ipsam omnis explicabo quibusdam?
-
-                        </p>
+                        <h1>Хобби и увлечения</h1>
+                        <p>Люблю заниматься спортом, особенно кататься на
+                            горных лыжах. Часто использую спорт, как способ
+                            переключиться на что- то другое, так сказать,
+                            перезагрузиться. Хороший прием, если того требует
+                            ситуация. На лыжах катаюсь с самого детства и не
+                            перестаю получать от этого вида спорта удовольствие.
+                            Стараюсь не упускать возможности покататься на
+                            горных курортах в новогодние каникулы и на закрытие
+                            зимнего сезона.
+                            Также имею первый разряд по шахматам. Люблю
+                            волейбол, плавание.
+                            В настоящее время хожу в тренажерный зал, сейчас это
+                            удобно сочетать с учебой.
+                            Читаю книги, как правило, фикшин, иногда нон-фикшин,
+                            смотрю фильмы.</p>
                     </div>
                     
                 </div>
@@ -96,11 +107,13 @@
                     </div>
                 </div>
                 <div class="media__container">
+                    
                     <h1>Моя любимая музыка</h1>
+                    
                     <div class="player__song__container">
 
                         <canvas class="player__fireplace" id="player-fireplace"></canvas>
-                        <!-- <canvas class="player__line" id="player-line"></canvas> -->
+                    
                 
                         <div class="player">
                             <div class="cover"><img class="cover__img" src="img/1.jpg" alt="cover"></div>
@@ -133,17 +146,30 @@
                         </div>
                     </div>
                 </div>
+                
                 <div class="video_player">
+                    <h1>Отрывок из моего любимого фильма</h1>
+                    
                     <video src="./video/video.mp4" class="video"></video>
                     <div class="controls">
-                        <div class="controls__video__play">
-                            <img class="controls__video__play__btn" src="./img/icons8-play-30.png" alt="">
+                        <div class="btns">
+                            <div class="controls__video__play">
+                                <svg class="controls__video__play__btn" width="10" height="10   " viewBox="0 0 10 18" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <path class="controls__video__play__path"  d="M0.0195312 0.269531L13.7305 9L0.0195312 17.7305V0.269531Z"/>
+                                </svg>
+                                
+                            </div>
+                            <div class="controls__stop">
+                                <svg fill="#000000" height="800px" width="800px" version="1.1" id="Capa_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" 
+                                    viewBox="0 0 185 185" xml:space="preserve">
+                                    <path d="M0,0h185v185H0V0z"/>
+                                </svg></div>
                         </div>
-                        <div class="controls__stop"><img src="./img/icons8-stop-30.png" alt=""></div>
                         <div class="progress__container controls__progress">
                             <input type="range" class="progress-slider progress-video-slider" min="0" max = "3000" value="0">
                         </div>
                         <div class="controls__time">00:00</div>
+                        
                     </div>
                 </div>
             </div>
