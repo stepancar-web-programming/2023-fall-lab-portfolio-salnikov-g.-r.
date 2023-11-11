@@ -12,7 +12,7 @@ owl.owlCarousel({
 	loop: true,
 	
 	margin: 40,
-	startPosition: 1,
+	startPosition: 5,
 	items: 3,
 });
 
@@ -45,8 +45,8 @@ const progressSlider = document.querySelector('.progress-slider');
 
 
 // Название песен
-const songs = ['Aqua - Barbie Girl','Eurythmics - Sweet Dreams Are Made of This',  'Leningrad - WWW',
-    'ACDC - Back In Black', 'Depeche Mode - Personal Jesus', 'Queen - The Show Must Go On']
+const songs = ['Скриптонит, T-Fest - Ламбада',  'Eurythmics - Sweet Dreams Are Made of This',
+    'ACDC - Back In Black', 'Leningrad - WWW', 'Queen - The Show Must Go On']
 // Песня по умолчанию 
 let songIndex = 0
 
