@@ -29,15 +29,16 @@ img {
 }
 
 /*-------------------------------Header-------------------------------- */
-.typed-strings span{
+.typed-strings span {
     display: none;
 }
+
 .header {
     position: relative;
     display: flex;
-    flex-direction: column; 
-    justify-content: center; 
-    align-items: center; 
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
     width: 100%;
     height: 100vh;
     background-size: cover;
@@ -74,11 +75,12 @@ img {
     left: 50%;
     transform: translate(-50%, 0);
 }
-.header-arrow img{
+
+.header-arrow img {
     width: 150px;
     height: 150px;
 
-  
+
 }
 
 
@@ -88,7 +90,6 @@ img {
     color: #FFFFFF;
 
 }
-
 
 
 /* -------------------------MAIN------------------------ */
@@ -181,7 +182,7 @@ img {
 
 .footer-copyright {
     color: white;
-    line-height: 1.3;    
+    line-height: 1.3;
 }
 
 .footer-copyright-name {
@@ -215,7 +216,7 @@ img {
 }
 
 
-.footer-contacts  {
+.footer-contacts {
     text-align: center;
     margin: 15px 0;
     font-size: 18px;
