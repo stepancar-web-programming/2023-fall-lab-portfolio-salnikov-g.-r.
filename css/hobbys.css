@@ -229,17 +229,17 @@ header:before {
     }
 
 
-    .header__burger.active::before {
+    .header__burger_active::before {
         transform: rotate(45deg);
         top: 9px;
     }
 
-    .header__burger.active::after {
+    .header__burger_active::after {
         transform: rotate(-45deg);
         bottom: 8px;
     }
 
-    .header__burger.active span {
+    .header__burger_active span {
         transform: scale(0);
     }
 
@@ -254,7 +254,7 @@ header:before {
         transition: all 0.3s ease 0s;
     }
 
-    .header__menu.active {
+    .header__menu_active {
         top: 0;
         padding: 70px 10px 20px 10px;
     }
