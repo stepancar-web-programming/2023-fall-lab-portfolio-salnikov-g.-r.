@@ -10,7 +10,6 @@ const owl = $('.owl-carousel');
 owl.owlCarousel({
     center: true,
     loop: true,
-
     margin: 40,
     startPosition: 5,
     items: 3,
@@ -40,10 +39,9 @@ const player = document.querySelector('.player'),
 const progressSlider = document.querySelector('.progress-slider');
 
 
-// Название песен
 const songs = ['Скриптонит, T-Fest - Ламбада', 'Eurythmics - Sweet Dreams Are Made of This',
     'ACDC - Back In Black', 'Leningrad - WWW', 'Queen - The Show Must Go On']
-// Песня по умолчанию 
+
 let songIndex = 0
 
 function loadSong(song) {
@@ -54,7 +52,7 @@ function loadSong(song) {
 
 loadSong(songs[songIndex])
 
-// Play
+
 function playSong() {
     player.classList.add('play')
     imgsrc.setAttribute('d', 'M10.5195 0.269531H15.5V17.7305H10.5195V0.269531ZM0.5 17.7305V0.269531H5.48047V17.7305H0.5Z');
@@ -80,7 +78,7 @@ playBtn.addEventListener('click', () => {
 
 })
 
-// Переключение
+
 function nextSong() {
     progressSlider.value = 0
     songIndex = (songIndex + 1) % songs.length;
@@ -142,7 +140,7 @@ function resizeCanvas() {
     canvas.height = parentElement.offsetHeight;
 }
 
-// Функция для центрирования canvas
+
 function centerCanvas() {
     const parentElement = canvas.parentElement;
     const parentWidth = parentElement.offsetWidth;
@@ -156,7 +154,7 @@ function centerCanvas() {
     canvas.style.top = `${canvasTop}px`;
 }
 
-// Изменение размеров canvas при загрузке страницы и изменении размера окна
+
 window.addEventListener('load', () => {
     resizeCanvas();
     centerCanvas();
@@ -167,14 +165,12 @@ window.addEventListener('resize', () => {
     centerCanvas();
 });
 
-// Рисует колонку
+
 function drawColumn(x, width, height) {
     const gradient = ctx.createLinearGradient(0, -height / 4, 0, canvas.height / 2);
     gradient.addColorStop(1, "#2387f9");
     gradient.addColorStop(0.8, "#6eaafa");
 
-
-    // Рисование основной части колонки с тенью
     ctx.shadowColor = 'rgba(0, 0, 0, 0.5)';
     ctx.shadowBlur = 10;
     ctx.shadowOffsetX = 5;
@@ -183,11 +179,6 @@ function drawColumn(x, width, height) {
     ctx.shadowColor = 'rgba(0, 0, 0, 0.2)';
     ctx.shadowBlur = 5;
     ctx.shadowOffsetX = 2;
-
-    // Очистка параметров тени
-    // ctx.shadowColor = 'rgba(0, 0, 0, 0)';
-    // ctx.shadowBlur = 0;
-    // ctx.shadowOffsetX = 0;
 
     const gradient2 = ctx.createLinearGradient(0, canvas.height, 0, height / 4);
     gradient2.addColorStop(1, "#0076ff");
@@ -207,13 +198,12 @@ function interpolateColor(color1, color2, percent) {
     const r2 = parseInt(color2.slice(1, 3), 16);
     const g2 = parseInt(color2.slice(3, 5), 16);
     const b2 = parseInt(color2.slice(5, 7), 16);
-s
-    // Интерполируем RGB-компоненты
+
     const interpolatedR = Math.round(r1 + (r2 - r1) * percent);
     const interpolatedG = Math.round(g1 + (g2 - g1) * percent);
     const interpolatedB = Math.round(b1 + (b2 - b1) * percent);
 
-    // Формируем новый цвет в формате RGB
+
     return `rgb(${interpolatedR},${interpolatedG},${interpolatedB})`;
 }
 

@@ -69,7 +69,6 @@ img {
 .header-arrow {
     width: 150px;
     height: 150px;
-
     position: absolute;
     bottom: 30px;
     left: 50%;
@@ -79,8 +78,6 @@ img {
 .header-arrow img {
     width: 150px;
     height: 150px;
-
-
 }
 
 
@@ -217,10 +214,20 @@ img {
 
 
 .footer-contacts {
+    display: flex;
+    flex-direction: column;
     text-align: center;
     margin: 15px 0;
     font-size: 18px;
     font-weight: 600;
     line-height: 1.3;
     color: white;
+}
+.phone {
+    margin-top: 8px;
+    color: #FFFFFF;
+    text-decoration: none;
+}
+.phone:hover {
+    color: #e3e0e0; /
 }

@@ -86,9 +86,7 @@ header:before {
     left: 0;
     width: 100%;
     height: 100%;
-    /* background-color: black;
-    opacity: 0.5;
-    z-index: 3; */
+
 }
 
 .header__body {
@@ -103,14 +101,10 @@ header:before {
     bottom: 0;
 }
 
-.header::befor {
+.header::before {
     top: 0;
 }
 
-
-.header__menu {
-
-}
 
 .header__list {
     padding: 0;
@@ -121,7 +115,6 @@ header:before {
 
 .header__list li {
     list-style: none;
-
 }
 
 .header__list li {
@@ -152,12 +145,9 @@ header:before {
 
 .header__list a:hover::after {
     content: '';
-
     position: absolute;
     left: 0;
-
     bottom: -6px;
-
     display: block;
     width: 84px;
     height: 4px;
@@ -245,10 +235,20 @@ h1 {
 
 
 .footer-contacts {
+    display: flex;
+    flex-direction: column;
     text-align: center;
     margin: 15px 0;
     font-size: 18px;
     font-weight: 600;
     line-height: 1.3;
     color: white;
+}
+.phone {
+    margin-top: 8px;
+    color: #FFFFFF;
+    text-decoration: none;
+}
+.phone:hover {
+    color: #e3e0e0; /
 }
