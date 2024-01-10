@@ -193,22 +193,6 @@ function drawColumn(x, width, height) {
   ctx.fillRect(x, canvas.height / 2, width, height / 2);
 }
 
-function interpolateColor(color1, color2, percent) {
-  // Разбираем цвета в RGB-компоненты
-  const r1 = parseInt(color1.slice(1, 3), 16);
-  const g1 = parseInt(color1.slice(3, 5), 16);
-  const b1 = parseInt(color1.slice(5, 7), 16);
-
-  const r2 = parseInt(color2.slice(1, 3), 16);
-  const g2 = parseInt(color2.slice(3, 5), 16);
-  const b2 = parseInt(color2.slice(5, 7), 16);
-
-  const interpolatedR = Math.round(r1 + (r2 - r1) * percent);
-  const interpolatedG = Math.round(g1 + (g2 - g1) * percent);
-  const interpolatedB = Math.round(b1 + (b2 - b1) * percent);
-
-  return `rgb(${interpolatedR},${interpolatedG},${interpolatedB})`;
-}
 
 function render() {
   analyser.getByteFrequencyData(frequencyData);
