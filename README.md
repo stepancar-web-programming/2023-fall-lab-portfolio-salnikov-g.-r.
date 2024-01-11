@@ -1,1 +1,1 @@
-https://goshik033.github.io/2023-fall-lab-portfolio-salnikov-g.-r./index.html
+https://goshik033.github.io/2023-fall-lab-portfolio-salnikov-g.-r./
