@@ -57,9 +57,18 @@ loadSong(songs[songIndex]);
 
 function playSong() {
   player.classList.add("play");
+  if (!video.paused) {
+    video.pause();
+
+    playButtonImg.setAttribute(
+      "d",
+      "M0.0195312 0.269531L13.7305 9L0.0195312 17.7305V0.269531Z",
+    );
+    playButtonsvg.setAttribute("viewBox", "0 0 10 18");
+  }
   imgsrc.setAttribute(
     "d",
-    "M10.5195 0.269531H15.5V17.7305H10.5195V0.269531ZM0.5 17.7305V0.269531H5.48047V17.7305H0.5Z"
+    "M10.5195 0.269531H15.5V17.7305H10.5195V0.269531ZM0.5 17.7305V0.269531H5.48047V17.7305H0.5Z",
   );
   controlsPlay.setAttribute("viewBox", "0 0 16 18");
   audio.play();
@@ -69,7 +78,7 @@ function pauseSong() {
   player.classList.remove("play");
   imgsrc.setAttribute(
     "d",
-    "M0.0195312 0.269531L13.7305 9L0.0195312 17.7305V0.269531Z"
+    "M0.0195312 0.269531L13.7305 9L0.0195312 17.7305V0.269531Z",
   );
   controlsPlay.setAttribute("viewBox", "0 0 10 18");
   audio.pause();
@@ -147,7 +156,6 @@ function centerCanvas() {
   const parentElement = canvas.parentElement;
   const parentWidth = parentElement.offsetWidth;
   const parentHeight = parentElement.offsetHeight;
-  console.log(parentElement);
 
   const canvasLeft = (parentWidth - canvas.width) / 2;
   const canvasTop = (parentHeight - canvas.height) / 2;
@@ -171,8 +179,9 @@ function drawColumn(x, width, height) {
     0,
     -height / 4,
     0,
-    canvas.height / 2
+    canvas.height / 2,
   );
+
   gradient.addColorStop(1, "#2387f9");
   gradient.addColorStop(0.8, "#6eaafa");
 
@@ -183,6 +192,7 @@ function drawColumn(x, width, height) {
   ctx.fillRect(x, canvas.height / 2, width, -height / 2);
   ctx.shadowColor = "rgba(0, 0, 0, 0.2)";
   ctx.shadowBlur = 5;
+
   ctx.shadowOffsetX = 2;
 
   const gradient2 = ctx.createLinearGradient(0, canvas.height, 0, height / 4);
@@ -192,7 +202,6 @@ function drawColumn(x, width, height) {
   ctx.fillStyle = gradient2;
   ctx.fillRect(x, canvas.height / 2, width, height / 2);
 }
-
 
 function render() {
   analyser.getByteFrequencyData(frequencyData);
@@ -225,7 +234,7 @@ function render() {
 
 window.requestAnimationFrame(render);
 
-// ------------------------------VIDEO-----------------------------
+// ------------------------------ВИДЕО-----------------------------
 const video = document.querySelector(".video"),
   playButton = document.querySelector(".controls__video__play"),
   playButtonsvg = document.querySelector(".controls__video__play__btn"),
@@ -236,17 +245,21 @@ const video = document.querySelector(".video"),
 
 function toggleVideoStatus() {
   if (video.paused) {
+    const isMusicPlaying = player.classList.contains("play");
+    if (isMusicPlaying) {
+      pauseSong();
+    }
     video.play();
     playButtonImg.setAttribute(
       "d",
-      "M10.5195 0.269531H15.5V17.7305H10.5195V0.269531ZM0.5 17.7305V0.269531H5.48047V17.7305H0.5Z"
+      "M10.5195 0.269531H15.5V17.7305H10.5195V0.269531ZM0.5 17.7305V0.269531H5.48047V17.7305H0.5Z",
     );
     playButtonsvg.setAttribute("viewBox", "0 0 16 18");
   } else {
     video.pause();
     playButtonImg.setAttribute(
       "d",
-      "M0.0195312 0.269531L13.7305 9L0.0195312 17.7305V0.269531Z"
+      "M0.0195312 0.269531L13.7305 9L0.0195312 17.7305V0.269531Z",
     );
     playButtonsvg.setAttribute("viewBox", "0 0 10 18");
   }
@@ -261,7 +274,7 @@ function stopVideo() {
   video.pause();
   playButtonImg.setAttribute(
     "d",
-    "M0.0195312 0.269531L13.7305 9L0.0195312 17.7305V0.269531Z"
+    "M0.0195312 0.269531L13.7305 9L0.0195312 17.7305V0.269531Z",
   );
   playButtonsvg.setAttribute("viewBox", "0 0 10 18");
 }

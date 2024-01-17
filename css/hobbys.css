@@ -733,8 +733,6 @@ input[type="range"]::-moz-range-progress {
     cursor: pointer;
 }
 
-.controls__video__play__btn {
-}
 
 .control__stop {
     margin-left: 20px;
@@ -743,15 +741,19 @@ input[type="range"]::-moz-range-progress {
 
 
 .controls__time {
+    width: 71px;
     margin-left: auto;
+    margin-right: auto;
     font-weight: 500;
-    font-size: 24px;
+    font-size: 20px;
     line-height: 28px;
     color: white;
 }
 
+
 .progress-video-slider {
     margin-bottom: 30px;
+    width: 820px;
 }
 
 
