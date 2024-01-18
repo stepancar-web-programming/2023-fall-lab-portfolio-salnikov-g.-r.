@@ -1,0 +1,246 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700;800&display=swap"
+          rel="stylesheet">
+    <link rel="stylesheet" href="css/hobbys.css">
+    <link
+            rel="stylesheet"
+            href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css"
+            integrity="sha512-tS3S5qG0BlhnQROyJXvNjeEM4UpMXHrQfTGmbQ1gKmelCxlSEBUaxhRBj/EFTzpbP4RVSrpEikbmdJobCvhE3g=="
+            crossorigin="anonymous"
+            referrerpolicy="no-referrer"
+    />
+    <link
+            rel="stylesheet"
+            href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.theme.default.css"
+            integrity="sha512-OTcub78R3msOCtY3Tc6FzeDJ8N9qvQn1Ph49ou13xgA9VsH9+LRxoFU6EqLhW4+PKRfU+/HReXmSZXHEkpYoOA=="
+            crossorigin="anonymous"
+            referrerpolicy="no-referrer"
+    />
+
+
+    <title>Document</title>
+</head>
+<body>
+<div class="wrapper">
+    <header class="header">
+        <div class="header__container">
+            <div class="header__body">
+                <div class="header__burger">
+                    <span></span>
+                </div>
+                <nav class="header__menu">
+                    <ul class="header__list">
+                        <li>
+                            <a href="./index.html" class="header__link">Главная</a>
+                        </li>
+                        <li>
+                            <a href="#photo" class="header__link">Фото</a>
+                        </li>
+                        <li>
+                            <a href="#music" class="header__link">Музыка</a>
+                        </li>
+                        <li>
+                            <a href="#movies" class="header__link">Фильмы</a>
+                        </li>
+
+
+                    </ul>
+                </nav>
+            </div>
+
+        </div>
+    </header>
+    <main>
+        <div class="main__container">
+            <div class="main__info">
+                <div class="main__info__text">
+                    <h1>Хобби и увлечения</h1>
+                    <p>Люблю заниматься спортом, особенно кататься на
+                        горных лыжах. Часто использую спорт, как способ
+                        переключиться на что- то другое, так сказать,
+                        перезагрузиться. Хороший прием, если того требует
+                        ситуация. На лыжах катаюсь с самого детства и не
+                        перестаю получать от этого вида спорта удовольствие.
+                        Стараюсь не упускать возможности покататься на
+                        горных курортах в новогодние каникулы и на закрытие
+                        зимнего сезона.
+                        Также имею первый разряд по шахматам. Люблю
+                        волейбол, плавание.
+                        В настоящее время хожу в тренажерный зал, сейчас это
+                        удобно сочетать с учебой.
+                        Читаю книги, как правило, фикшин, иногда нон-фикшин,
+                        смотрю фильмы.</p>
+                </div>
+                <div class="ramka"><img src="./img/1711.jpg" alt=""></div>
+            </div>
+            <div class="main__photo" id="photo">
+                <div class="container-right">
+                    <div class="main__photo__row">
+                        <div class="main__photo__content">
+                            <h2 class="main__photo__title" >
+                                <span></span>
+                                Фотографии
+                            </h2>
+                            <div class="main__photo__text">
+                                <p> Шесть фотографий из разных этапов моей жизни</p>
+                            </div>
+
+                        </div>
+
+                        <div class="main__photo__slider">
+                            <div class="slider">
+                                <div class="owl-carousel">
+                                    <img class="slider__item" src="img/sliderPhotos/1.jpg" alt="Slider item"/>
+                                    <img class="slider__item" src="img/sliderPhotos/2.jpg" alt="Slider item"/>
+                                    <img class="slider__item" src="img/sliderPhotos/3.jpg" alt="Slider item"/>
+                                    <img class="slider__item" src="img/sliderPhotos/4.jpg" alt="Slider item"/>
+                                    <img class="slider__item" src="img/sliderPhotos/5.jpg" alt="Slider item"/>
+                                    <img class="slider__item" src="img/sliderPhotos/6.PNG" alt="Slider item"/>
+
+                                </div>
+                                <button class="slider__btn slider__btn--prev">
+                                    <img src="img/sliderPhotos/arrow-left.svg" alt=""/>
+                                </button>
+                                <button class="slider__btn slider__btn--next">
+                                    <img src="img/sliderPhotos/arrow-right.svg" alt=""/>
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="media__container">
+
+                <h1 id="music">Мои любимые песни</h1>
+                <p>Музыка - это мой верный спутник в жизни. Меня привлекают разные жанры, особенно рэп, рок и поп.
+                    В каждой песне я нахожу что-то своё, что соответствует моему настроению.
+                    Музыка для меня как волшебный мир, где звуки говорят на языке эмоций.</p>
+
+                <div class="player__song__container">
+
+                    <canvas class="player__fireplace" id="player-fireplace"></canvas>
+
+
+                    <div class="player">
+                        <div class="cover"><img class="cover__img" src="img/player/1.jpg" alt="cover"></div>
+
+                        <div class="song">Song Title</div>
+                        <audio class="audio" src='audio/Скриптонит, T-Fest - Ламбада.mp3'></audio>
+                        <div class="progress__container">
+                            <input type="range" class="progress-slider" min="0" max="3000" value="0">
+                        </div>
+                        <div class="buttons">
+                            <div class="btn prev">
+                                <svg width="10" height="10" viewBox="0 0 10 10" fill="none"
+                                     xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M3.13672 5L9.5 0.5V9.5L3.13672 5ZM0.5 0.5H2.01172V9.5H0.5V0.5Z"/>
+                                </svg>
+                            </div>
+
+                            <div class="btn play">
+                                <svg class="controls__play" width="10" height="10   " viewBox="0 0 10 18" fill="none"
+                                     xmlns="http://www.w3.org/2000/svg">
+                                    <path class="controls__play__path"
+                                          d="M0.0195312 0.269531L13.7305 9L0.0195312 17.7305V0.269531Z"/>
+                                </svg>
+                            </div>
+                            <div class="btn next">
+                                <svg aria-hidden="true" focusable="false" width="10" height="10" viewBox="0 0 10 10"
+                                     fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M7.98828 0.5H9.5V9.5H7.98828V0.5ZM0.5 9.5V0.5L6.86328 5L0.5 9.5Z"/>
+                                </svg>
+                            </div>
+                        </div>
+
+
+                    </div>
+                </div>
+            </div>
+
+            <div class="video_player" id="movies">
+                <h1>Отрывок из моего любимого фильма</h1>
+                <p>Я обожаю смотреть фильмы, особенно мне нравятся фильмы Квентина Тарантино,
+                    потому что он создаёт настоящие шедевры. Например, "Криминальное чтиво"
+                    и "Бешеные псы" заставляют меня вживаться в атмосферу его уникального стиля и сценариев,
+                    полных неожиданных поворотов. Но особое восхищение вызывают Тарантиновские диалоги – острые,
+                    насыщенные и полные непредсказуемости, делая каждую фразу запоминающейся.</p>
+
+                <video src="./video/video.mp4" class="video"></video>
+                <div class="controls">
+                    <div class="btns">
+                        <div class="controls__video__play">
+                            <svg class="controls__video__play__btn" width="10" height="10   " viewBox="0 0 10 18"
+                                 fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path class="controls__video__play__path"
+                                      d="M0.0195312 0.269531L13.7305 9L0.0195312 17.7305V0.269531Z"/>
+                            </svg>
+
+                        </div>
+                        <div class="controls__stop">
+                            <svg fill="#000000" height="800px" width="800px" version="1.1" id="Capa_1"
+                                 xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
+                                 viewBox="0 0 185 185" xml:space="preserve">
+                                    <path d="M0,0h185v185H0V0z"/>
+                                </svg>
+                        </div>
+                    </div>
+                    <div class="progress__container controls__progress">
+                        <input type="range" class="progress-slider progress-video-slider" min="0" max="3000" value="0">
+                    </div>
+                    <div class="controls__time">00:00</div>
+
+                </div>
+            </div>
+        </div>
+
+
+    </main>
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-row">
+
+                <div class="footer-copyright footer-col">
+                    <div class="footer-copyright-name">Город</div>
+                    <p>Санкт-Петербург, Россия</p>
+                </div>
+                <div class="footer-icons footer-col">
+                    <p>Мои профили в социальных сетях:</p>
+                    <div class="footer-icons-row">
+                        <a href="https://vk.com/skgeorge">
+                            <img src="./img/vk.svg" alt="">
+                        </a>
+
+                        <a href="https://github.com/goshik033">
+                            <img src="./img/github.svg" alt="">
+                        </a>
+                    </div>
+                </div>
+                <div class="footer-contacts footer-col">
+                    Номер телефона:
+                    <a class="phone" href="tel:+79990354815"> +7(999)035-48-15</a>
+                </div>
+
+
+            </div>
+        </div>
+    </footer>
+</div>
+<script
+        src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"
+        referrerpolicy="no-referrer"
+></script>
+<script
+        src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js"
+        integrity="sha512-bPs7Ae6pVvhOSiIcyUClR7/q2OAsRiovw4vAkX+zJbw3ShAeeqezq50RIIcIURq7Oa20rW2n2q+fyXBNcU9lrw=="
+        crossorigin="anonymous"
+        referrerpolicy="no-referrer"
+></script>
+<script src="./js/hobbys.js"></script>
+</body>
+</html>
